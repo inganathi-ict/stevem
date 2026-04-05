@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteveM Group</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo-title">
+        <img src="logo.jpeg" alt="Company Logo">
+        <h1>SteveM Group</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#pick">Request a Pickup</a>
+            <a href="#track">Track a Parcel</a>
+        </ul>
+    </nav>
+    <div class="auth-buttons">
+        <a href="#" class="login">Login</a>
+        <a href="#" class="register">Register</a>
+    </div>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>Your Cargo, Our Care</h1>
+      <p>Shipping by land, sea, and air — delivering your business forward.</p>
+      <a href="#services" class="btn">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+    <div class="container">
+        <form id="services-form">
+
+            <div class="card">
+                <h3>On-Forwarding & Customs Clearing</h3>
+                <p>Seamless on-forwarding of shipments from ports or hubs to final destination.</p>
+                
+                <button type="button" onclick="toggleInfo(this)">Learn More</button>
+
+                  <div class="more-info">
+                    <p>
+                      Full customs clearing services for imports and exports, including documentation, 
+                      tariff classification, SARS compliance, EDI submissions, permits, and regulatory support to minimise delays and ensure smooth clearance.
+                    </p>
+                 </div>
+
+              </div>
+
+            <div class="card">
+                <h3>Air Freight</h3>
+                <p>Fast, reliable domestic and international air freight solutions for time-sensitive and high value cargo.</p>
+               
+                <button type="button" onclick="toggleInfo(this)">Learn More</button>
+
+
+                  <div class="more-info">
+                    <p>
+                      Services include consolidation, next-flight-out options, dedicated charters, door-to-door delivery, and full shipment tracking.
+                      Suitable for general cargo, perishables, and specialised shipments.
+                    </p>
+                  </div>
+
+            </div>
+
+            <div class="card">
+                <h3>Same-Day Deliveries</h3>
+                <p>Prompt same-day collection and delivery service for urgent shipments of any size or weight.</p>
+             
+                <button type="button" onclick="toggleInfo(this)">Learn More</button>
+
+                 <div class="more-info">
+                    <p>
+                        Ideal for critical documents, medical supplies, spare parts, and time-sensitive commercial goods,
+                        with flexible routing and dedicated resources to guarantee speed and reliability
+                    </p>
+                 </div>
+
+              </div>
+
+            <div class="card">
+                <h3>Local Transportation & Distribution</h3>
+                <p>Efficient local & regional road transportation.</p>
+                
+                <button type="button" onclick="toggleInfo(this)">Learn More</button>
+
+                <div class="more-info">
+                    <p>
+                        Including dedicated fleet options, last-mile delivery, point-to-point hauls, and scheduled distribution routes across Gauteng and South Africa.
+                        Focused on reliability, safety, and cost optimisation for retail, manufacturing, and wholesale clients.
+                    </p>
+                </div>
+
+              </div>
+        </form>
+    </div>
+</section>
+
+<script>
+function toggleInfo(button) {
+    const info = button.nextElementSibling;
+
+    if (info.style.display === "block") {
+        info.style.display = "none";
+        button.innerText = "Learn More";
+    } else {
+        info.style.display = "block";
+        button.innerText = "Show Less";
+    }
+}
+</script>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-section">
+      <h3>SteveM Group</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <p>Tel: +27 (0)72 359 6952</p>
+        <p>Email: steve@stevemgroup.co.za</p>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Help Center</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+     <p>© 2026 SteveM Group | All Rights Reserved</p>
+</footer>
+
+</body>
+
+</html>
