@@ -129,6 +129,7 @@ footer {
     text-align: center;
     padding: 40px 20px 10px;
     clear: both;
+    position: relative;
 }
 
 .footer-container {
@@ -173,31 +174,32 @@ footer {
 
 /* HERO SECTION */
 .hero {
-  height: 100vh;
+   min-height: 100vh; 
   background: url('ware.png') no-repeat center center/cover;
-  position: relative;
   align-items: flex-start; /* move content to top */
-  
+  margin-bottom: 50px; 
+  position: relative;
+  display: flex; /* ADD THIS */
 }
 
 /* DARK OVERLAY */
 .hero-overlay {
   background: rgba(0, 0, 0, 0.55);
   height: 100%;
+  width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 100px; /* replaces your top:100px */
   text-align: center;
 }
 
 /* CONTENT */
 .hero-content {
-   position: absolute;
-    top: 100px; /* pushes it below nav */
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
     color: white;
+    max-width: 800px;
+    margin: 0 auto;
 
 }
 
