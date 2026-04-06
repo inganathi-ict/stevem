@@ -16,10 +16,6 @@ html {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto; /* centers everything */
         }
 
         .logo-title {
@@ -409,4 +405,48 @@ input, select, textarea {
     .sections {
         flex-direction: column;
     }
+}
+
+/* Burger hidden on desktop */
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* 📱 Tablet & Mobile */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: transparent;
+    width: 100%;
+    display: none; /* hidden by default */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  /* Show burger */
+  .burger {
+    display: block;
+    color: #cfcfcf;
+    position: relative;
+    z-index: 1001;
+
+  }
+
+  /* Active menu */
+  nav.active {
+    display: block;
+  }
 }
