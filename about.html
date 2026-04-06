@@ -18,7 +18,7 @@
     </div>
 
     <div class="center">
-      <nav>
+      <nav id="nav-menu">
           <ul>
               <a href="index.html">Home</a>
               <a href="contact.html">Contact Us</a>
@@ -34,7 +34,23 @@
     </div>
 
   </div>
+
+  </div>
+       <!-- Burger Icon -->
+    <div class="burger" id="burger">
+      ☰
+    </div>
+
 </header>
+
+<script>
+  const burger = document.getElementById("burger");
+  const nav = document.getElementById("nav-menu");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
 
 <section class="hero">
   <div class="hero-overlay">
@@ -72,7 +88,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#services">Contact Us</a></li>
       </ul>
     </div>
 
