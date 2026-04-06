@@ -19,7 +19,7 @@
     </div>
 
     <div class="center">
-      <nav>
+      <nav id="nav-menu">
           <ul>
               <a href="index.html">Home</a>
               <a href="about.html">About Us</a>
@@ -35,7 +35,23 @@
     </div>
 
   </div>
+
+  </div>
+       <!-- Burger Icon -->
+    <div class="burger" id="burger">
+      ☰
+    </div>
+
 </header>
+
+<script>
+  const burger = document.getElementById("burger");
+  const nav = document.getElementById("nav-menu");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
 
 <section class="hero">
 <div class="hero-overlay">
