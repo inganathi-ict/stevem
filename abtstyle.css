@@ -25,6 +25,7 @@ html {
             display: flex;
             flex-direction: column; /* stack vertically */
             align-items: flex-start; /* align left */
+
         }
 
         .logo-title img {
