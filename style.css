@@ -10,6 +10,7 @@ html {
             padding: 10px 20px;
             background-color: #ffffff;
             color: #ffffff;
+            z-index: 1000; /* stays above hero */
         }
 
         .header-container {
@@ -89,7 +90,7 @@ html {
             text-decoration: none;
             padding: 6px 12px;
             border-radius: 4px;
-            font-size: 18px;
+            font-size: 20px;
             transition: 0.3s;
         }
 
@@ -117,7 +118,7 @@ html {
         @media (max-width: 768px) {
             nav ul {
                 gap: 15px;
-                font-size: 14px;
+                font-size: 18px;
             }
 
             .logo-title h1 {
@@ -183,6 +184,7 @@ footer {
   height: 100vh;
   background: url('logistics-hero.png') no-repeat center center/cover;
   position: relative;
+  z-index: 1; /* lower than menu */
 }
 
 /* DARK OVERLAY */
@@ -297,41 +299,60 @@ button {
   display: none;
   font-size: 28px;
   cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+  top: 180px;
+
 }
 
-/* 📱 Tablet & Mobile */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+/* Burger Icon Styling */
+.burger {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position:fixed;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 2px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Mobile Styles */
 @media (max-width: 768px) {
-  nav {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: transparent;
-    width: 60%;
-    display: none; /* hidden by default */
-  }
+  .burger { display: flex; }
 
-  nav ul {
+  .nav-links {
+    display: none; /* Hide menu by default */
     flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top:220px;
+    background: #ffffff;
+    width: 200px;
+    padding: 1rem;
   }
 
-  nav ul li {
-    margin: 10px 0;
-  }
+  .nav-links.active { display: flex; } /* Show when toggled */
 
-  /* Show burger */
-  .burger {
-    display: block;
-    color: #cfcfcf;
-    position: relative;
-    z-index: 1001;
-
-  }
-
-  /* Active menu */
-  nav.active {
-    display: block;
-  }
+  /* Animate Burger to X */
+  .burger.toggle span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 5px); }
+  .burger.toggle span:nth-child(2) { opacity: 0; }
+  .burger.toggle span:nth-child(3) { transform: rotate(45deg) translate(-5px, -5px); }
 }
