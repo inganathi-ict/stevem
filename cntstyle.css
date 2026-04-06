@@ -176,7 +176,7 @@ footer {
 
 /* HERO SECTION */
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   background: url('contact.png') no-repeat center center/cover;
   align-items: flex-start; /* move content to top */
   position: relative;
@@ -187,12 +187,13 @@ footer {
 
 /* DARK OVERLAY */
 .hero-overlay {
-  position: absolute;
+  padding: 20px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  
 }
 
 /* CONTENT */
@@ -200,6 +201,7 @@ footer {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 
@@ -271,10 +273,10 @@ footer {
 .container {
     display: flex;
     flex-direction: column; /* stack items vertically */
-     width: 100%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-  padding: 20px;
+    padding: 20px;
 }
 
 .section1, .section2 {
@@ -290,7 +292,7 @@ footer {
 
 .section2{
   flex: 1 1 400px; /* gives it proper size */
-    max-width: 100%;
+  max-width: 100%;
   overflow-wrap: break-word;
 }
 
