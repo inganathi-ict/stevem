@@ -12,13 +12,13 @@
 
 <header>
 <div class="header-container">
-    <div class="logo-title">
+    <div href="index.html" class="logo-title">
         <img src="logo.jpeg" alt="Company Logo">
         
     </div>
 
     <div class="center">
-      <nav>
+      <nav id="nav-menu">
           <ul>
               <a href="about.html">About Us</a>
               <a href="contact.html">Contact Us</a>
@@ -28,13 +28,30 @@
       </nav>
    </div>
 
+ 
+
     <div class="auth-buttons">
         <a href="#" class="login">Login</a>
         <a href="#" class="register">Register</a>
     </div>
 
   </div>
+       <!-- Burger Icon -->
+    <div class="burger" id="burger">
+      ☰
+    </div>
+
+
 </header>
+
+<script>
+  const burger = document.getElementById("burger");
+  const nav = document.getElementById("nav-menu");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
 
 <section class="hero">
   <div class="hero-overlay">
