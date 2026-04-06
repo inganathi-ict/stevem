@@ -14,11 +14,12 @@
 <div class="header-container">
     <div href="index.html" class="logo-title">
         <img src="logo.jpeg" alt="Company Logo">
+        
     </div>
 
     <div class="center">
       <nav id="nav-menu">
-          <ul>
+          <ul class="nav-links" id="nav-links">
               <a href="about.html">About Us</a>
               <a href="contact.html">Contact Us</a>
               <a href="#pick">Request a Pickup</a>
@@ -36,20 +37,22 @@
 
   </div>
        <!-- Burger Icon -->
-    <div class="burger" id="burger">
-      ☰
-    </div>
-
+<button class="burger" id="burger" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
 </header>
 
 <script>
-  const burger = document.getElementById("burger");
-  const nav = document.getElementById("nav-menu");
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
 
-  burger.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  burger.classList.toggle('toggle');
+});
 </script>
 
 <section class="hero">
