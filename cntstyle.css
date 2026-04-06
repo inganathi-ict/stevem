@@ -284,6 +284,10 @@ footer {
     color: white;
 }
 
+.section1 p{
+    color: white;
+}
+
 .section2{
   flex: 1 1 400px; /* gives it proper size */
     max-width: 100%;
