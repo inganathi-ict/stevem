@@ -282,3 +282,47 @@ footer {
 .card:nth-child(2) { border-color: #28a745; }
 .card:nth-child(3) { border-color: #ff9800; }
 .card:nth-child(4) { border-color: #ff0000; }
+
+/* Burger hidden on desktop */
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* 📱 Tablet & Mobile */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: transparent;
+    width: 100%;
+    display: none; /* hidden by default */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  /* Show burger */
+  .burger {
+    display: block;
+    color: #cfcfcf;
+    position: relative;
+    z-index: 1001;
+
+  }
+
+  /* Active menu */
+  nav.active {
+    display: block;
+  }
+}
