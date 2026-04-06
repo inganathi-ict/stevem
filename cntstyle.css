@@ -7,13 +7,15 @@ html {
     scroll-behavior: smooth;
 }
         header {
-            position: relative;
+         padding: 10px 20px;
+         background-color: #ffffff;
+         color: #ffffff;
+        }
+
+         .header-container {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* pushes content to the left */
-            padding: 10px 20px;
-            background-color: #f8f8f8;
-            color: #ffffff;
+            justify-content: space-between;
         }
 
         .logo-title {
@@ -34,11 +36,11 @@ html {
         }
 
 /* CENTER: Navigation */
-        nav {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
+        .center {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+         
         }
 
         nav ul {
@@ -74,9 +76,7 @@ html {
 
 /* RIGHT (Buttons) */
         .auth-buttons {
-            flex: 1;
             display: flex;
-            justify-content: flex-end;
             gap: 10px;
         }
 
