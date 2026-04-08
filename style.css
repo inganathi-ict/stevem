@@ -78,6 +78,7 @@ html {
 
         nav a:hover {
             color: #016da3;
+            text-decoration: underline;
         }
 
 /* RIGHT (Buttons) */
@@ -294,16 +295,16 @@ button {
     cursor: pointer;
 }
 
-/* Burger hidden on desktop */
-.burger {
-  display: none;
-  font-size: 28px;
+.burger { 
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
   cursor: pointer;
-  position: absolute;
-  z-index: 1000;
-  top: 180px;
-
-}
+  background: rgb(25, 102, 190);
+  border: none;
+  position:relative;
+  left: 90px;
+  top: 5px;
+} 
 
 .nav-links {
   display: flex;
@@ -316,15 +317,6 @@ button {
   padding: 0 1rem;
 }
 
-/* Burger Icon Styling */
-.burger {
-  display: none; /* Hidden on desktop */
-  flex-direction: column;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  position:fixed;
-}
 
 .burger span {
   width: 25px;
