@@ -298,7 +298,6 @@ footer {
   border-radius: 5px; /* 👈 makes edges rounded */
   width: 55px;   /* 👈 increased size */
   height: 35px;  /* 👈 increased size */
-  display: flex;
   flex-direction: column;   /* 👈 stack spans vertically */
   align-items: center;      /* 👈 center horizontally */
   justify-content: center;  /* 👈 center vertically */
